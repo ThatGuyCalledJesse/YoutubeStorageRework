@@ -1,4 +1,4 @@
-codex = {
+__codex = {
     'a': (0,0,0),
     'A': (0,0,1),
     'b': (0,0,2),
@@ -63,3 +63,14 @@ codex = {
     '9': (0,0,61),
     ' ': (0,0,62)
 }
+
+def get_codex() -> dict:
+    return __codex
+
+def get_key_from_value(value):
+    for key, val in __codex.items():
+        if val == value:
+            return key
+
+def get_value_from_key(key):
+    return __codex.get(key, None)
