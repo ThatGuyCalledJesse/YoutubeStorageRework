@@ -74,3 +74,6 @@ def get_key_from_value(value):
 
 def get_value_from_key(key):
     return __codex.get(key, None)
+
+def __encode():
+    pass
