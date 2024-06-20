@@ -75,5 +75,23 @@ def get_key_from_value(value):
 def get_value_from_key(key):
     return __codex.get(key, None)
 
-def __encode():
-    pass
+def encode(input_text:str):
+    input_list = list(input_text)
+    encoded_list = []
+
+    for char in input_list:
+        encoded_list.append(get_value_from_key(char))
+    
+    return encoded_list
+
+def decode(input_list:list):
+    decoded_list = []
+
+    for tuple in input_list:
+        decoded_list.append(get_key_from_value(tuple))
+    
+    decoded_string = ""
+    for char in decoded_list:
+        decoded_string += char
+    
+    return decoded_string
