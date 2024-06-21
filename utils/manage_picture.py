@@ -21,7 +21,7 @@ def create_images(input_list: list, width=1920, height=1080, folder='images'):
         for x in range(width):
             for y in range(height):
                 if index >= len(input_list):
-                    pixels[x,y] = (255,255,255)
+                    pixels[x,y] = (255,255,254)
                 else:
                     pixels[x,y] = input_list[index]
                 index += 1
