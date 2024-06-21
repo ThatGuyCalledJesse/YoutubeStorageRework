@@ -67,13 +67,21 @@ __codex = {
 def get_codex() -> dict:
     return __codex
 
+def __get_values():
+    return __codex.values()
+
+def __get_keys():
+    return __codex.keys()
+
 def get_key_from_value(value):
-    for key, val in __codex.items():
-        if val == value:
-            return key
+    if value in __get_values():
+        for key, val in __codex.items():
+            if val == value:
+                return key
 
 def get_value_from_key(key):
-    return __codex.get(key, None)
+    if key in __get_keys():
+        return __codex.get(key, None)
 
 def encode(input_text:str):
     input_list = list(input_text)
