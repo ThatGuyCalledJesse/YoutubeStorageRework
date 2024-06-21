@@ -5,4 +5,4 @@ with open('example_text.txt') as file:
     input_text = file.read()
 
 encoded = encode(input_text)
-print(encoded)
+create_images(encoded, height=100, width=34)
