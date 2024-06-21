@@ -1,4 +1,5 @@
 from utils.encode_char import *
+from utils.manage_picture import *
 
 encoded = encode('Hello World!!!')
-print(decode(encoded))
+create_images(encoded)
