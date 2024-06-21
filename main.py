@@ -1,4 +1,4 @@
 from utils.encode_char import *
 
-encoded = encode('hello world!')
+encoded = encode('Hello World')
 print(decode(encoded))
