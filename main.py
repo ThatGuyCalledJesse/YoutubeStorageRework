@@ -1,5 +1,8 @@
 from utils.encode_char import *
 from utils.manage_picture import *
 
-encoded = encode('Hello World!!!~~~~~~')
-create_images(encoded, height=10, width=10)
+with open('example_text.txt') as file:
+    input_text = file.read()
+
+encoded = encode(input_text)
+print(encoded)
