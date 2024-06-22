@@ -1,4 +1,5 @@
 from PIL import Image
+from .encode_char import decode
 import math
 import os
 
@@ -33,10 +34,13 @@ def decode_images(folder:str='images'):
     index:int = 1
 
     for _ in range(amount_of_files):
-        img = Image.open(f'{folder}/image{i}.png')
+        img = Image.open(f'{folder}/image{index}.png')
         WIDTH:int = img.width
         HEIGHT:int = img.height
+        colour_codes = []
         for y in range(HEIGHT):
             for x in range(WIDTH):
-                pixel = 0
+                pixel = img.getpixel((x,y))
+                colour_codes.append(pixel)
         index += 1
+    return colour_codes
