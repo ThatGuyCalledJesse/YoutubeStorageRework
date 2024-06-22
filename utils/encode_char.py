@@ -105,14 +105,14 @@ def __get_values() -> list:
 def __get_keys() -> list:
     return list(__codex.keys())
 
-def get_key_from_value(value):
+def get_key_from_value(value:tuple):
     if value not in __get_values():
         return ('|CharNotRecognized|')
     for key, val in __codex.items():
         if val == value:
             return key
 
-def get_value_from_key(key):
+def get_value_from_key(key:str):
     if key not in __get_keys():
         return (255,255,255)
     return __codex.get(key, None)

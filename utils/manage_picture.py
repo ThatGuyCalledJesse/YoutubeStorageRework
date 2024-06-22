@@ -2,7 +2,7 @@ from PIL import Image
 import math
 import os
 
-def create_images(input_list: list, width=1920, height=1080, folder='images'):
+def create_images(input_list: list, width:int=1920, height:int=1080, folder:str='images'):
     if os.path.exists(folder):
         for file in os.listdir(folder):
             os.remove(os.path.join(folder, file))
@@ -26,3 +26,5 @@ def create_images(input_list: list, width=1920, height=1080, folder='images'):
                     pixels[x,y] = input_list[index]
                 index += 1
         img.save(f'images/picture{i+1}.png')
+
+def decode_images(folder:str='images')
