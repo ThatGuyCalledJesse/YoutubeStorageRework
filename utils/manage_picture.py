@@ -27,4 +27,6 @@ def create_images(input_list: list, width:int=1920, height:int=1080, folder:str=
                 index += 1
         img.save(f'images/picture{i+1}.png')
 
-def decode_images(folder:str='images')
+def decode_images(folder:str='images'):
+    images = os.listdir(folder)
+    amount_of_files = len(images)

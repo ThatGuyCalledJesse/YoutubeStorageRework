@@ -117,7 +117,7 @@ def get_value_from_key(key:str) -> tuple:
         return (255,255,255)
     return __codex.get(key, None)
 
-def encode(input_text:str) -> list:
+def encode(input_text:str) -> list[tuple]:
     input_list = list(input_text)
     encoded_list = []
 
