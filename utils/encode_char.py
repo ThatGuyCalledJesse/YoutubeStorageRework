@@ -105,19 +105,19 @@ def __get_values() -> list:
 def __get_keys() -> list:
     return list(__codex.keys())
 
-def get_key_from_value(value:tuple):
+def get_key_from_value(value:tuple) -> str:
     if value not in __get_values():
         return ('|CharNotRecognized|')
     for key, val in __codex.items():
         if val == value:
             return key
 
-def get_value_from_key(key:str):
+def get_value_from_key(key:str) -> tuple:
     if key not in __get_keys():
         return (255,255,255)
     return __codex.get(key, None)
 
-def encode(input_text:str):
+def encode(input_text:str) -> list:
     input_list = list(input_text)
     encoded_list = []
 
@@ -126,7 +126,7 @@ def encode(input_text:str):
     
     return encoded_list
 
-def decode(input_list:list):
+def decode(input_list:list) -> str:
     decoded_list = []
 
     for tuple in input_list:
