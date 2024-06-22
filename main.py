@@ -1,4 +1,4 @@
-from utils.encode_char import *
+from utils.encode_char import encode
 from utils.manage_picture import *
 
 with open('example_text.txt') as file:
