@@ -3,7 +3,7 @@ from .encode_char import decode
 import math
 import os
 
-def create_images(input_list: list, width:int=1920, height:int=1080, folder:str='images'):
+def create_images(input_list: list, width:int=1920, height:int=1080, folder:str='images') -> None:
     if os.path.exists(folder):
         for file in os.listdir(folder):
             os.remove(os.path.join(folder, file))
@@ -28,7 +28,7 @@ def create_images(input_list: list, width:int=1920, height:int=1080, folder:str=
                 index += 1
         img.save(f'images/image{i+1}.png')
 
-def decode_images(folder:str='images'):
+def decode_images(folder:str='images') -> list:
     images = os.listdir(folder)
     amount_of_files = len(images)
     index:int = 1
